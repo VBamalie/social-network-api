@@ -87,7 +87,7 @@ const userControllers = {
           )
           .catch((err) => res.status(500).json(err));
       },
-      removeAssignment(req, res) {
+      removeFriend(req, res) {
         User.findOneAndUpdate(
           { _id: req.params.userId },
           { $pull: { friends: { friendId: req.params.friendId } } },
